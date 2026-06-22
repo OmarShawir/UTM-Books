@@ -7,7 +7,7 @@ use Slim\Factory\AppFactory;
 use DI\Container;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/..');
-$dotenv->load();
+$dotenv->safeLoad();
 
 // PDO
 $pdo = new PDO(
