@@ -38,3 +38,5 @@ INSERT INTO users (name, email, password_hash, role) VALUES
 INSERT INTO books (title, author, year, genre, created_by) VALUES 
 ('Clean Code', 'Robert C. Martin', 2008, 'Programming', 1),
 ('The Pragmatic Programmer', 'Andrew Hunt', 1999, 'Programming', 2);
+
+ALTER TABLE users ADD COLUMN created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
