@@ -17,3 +17,5 @@ RUN sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available
 
 # Enable Apache mod_rewrite (required for Slim framework routing)
 RUN a2enmod rewrite
+
+RUN echo "<Directory /var/www/html/public>\nAllowOverride All\n</Directory>" >> /etc/apache2/apache2.conf
